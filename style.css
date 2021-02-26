@@ -1,0 +1,27 @@
+#paineis-sobre {
+	margin-top: 20px;
+}
+
+.premios-em-design {
+	font-weight: bold;
+}
+
+.titulo-depoimentos {
+	background: #0275D8;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin: 0px;
+	color: #FFFFFF;
+	font-size: 24px;
+}
+
+.grupo-radio {
+	width: 45%;
+	display: inline-block;
+}
+
+.contato-select {
+	width: 55%;
+	display: inline-block;
+
+}
