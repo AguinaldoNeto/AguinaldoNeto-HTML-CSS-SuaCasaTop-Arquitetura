@@ -18,10 +18,81 @@
 .grupo-radio {
 	width: 45%;
 	display: inline-block;
+	vertical-align: middle;
+}
+
+.grupo-radio .radio:first-child { /* Zerando o topo da margem apenas da pessoa física.*/
+	margin-top: 0px;
 }
 
 .contato-select {
 	width: 55%;
 	display: inline-block;
+	vertical-align: top;
+}
 
+footer {
+	background: #333;
+	color: #FFFFFF;
+	padding: 20px;
+	margin-top: 10px;
+}
+
+footer address:last-child {
+	margin-bottom: 0px;
+}
+
+html, body { /*Definição necessária para conseguirmos incluir a imagem decorativa*/
+	height: 100%;
+}
+
+header {
+	background-image: url(img/castelo.jpg);
+	background-size: cover; /*É a capa do header*/
+	background-position: top center; /*Posição da nossa capa*/
+	height: 100%;
+	position: relative;/*Todo pai é relativo se o filho for absoluto. Sendo assim, devemos por o position relative no pai*/
+}
+
+header h1 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.topcasafina-banner {
+	color: #FFFFFF;
+	background-color: rgba(0, 0, 0, 0.5); /*É a opacidade que o elemento irá receber*/
+	padding: 20px;
+	width: 80%; /*Tamanho que o meu banner terá em relação a imagem*/
+	border-radius: 8px;
+	position: absolute; /*Faz com que o banner fique em uma posição X dentro do header*/
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*O top fica com a borda superior sobre o centro do header, assim como o left fica com a borda esquerda
+	sobre o centro do header. Para corrigir, utilizamos o transform para voltamos 50% do valor top e left.*/
+	transition: 0.3s;
+}
+
+
+/*Projeto responsivo*/
+
+/*Sobre nós e Nossos Projetos*/
+@media(min-width: 768px) { /*O device tem que ter no mínimo 768px de largura*/
+	#paineis-sobre {
+		margin-top: 0px;
+	}
+}
+
+@media(min-width: 992px) {
+	.topcasafina-banner {
+		left: 0px;
+		transform: translate(0%, -80%);
+		width: 50%;
+	}
+
+	.TopCasaFina-bannerWrapper {
+		position: relative;
+		height: 100%;
+	}
 }
